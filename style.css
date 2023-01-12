@@ -1,0 +1,85 @@
+
+/* 
+ Theme Name:     Bare bones for Divi
+ Author:         Divi theme examples
+ Author URI:     http://www.divithemeexamples.com 
+ Template:       Divi
+ Version:        1.0 
+*/ 
+
+
+/* ----------- PUT YOUR CUSTOM CSS BELOW THIS LINE -- DO NOT EDIT ABOVE THIS LINE --------------------------- */ 
+
+.row.cs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    background: #fff;
+    padding: 15px;
+	transition: transform 0.3s ease-in-out;
+  min-height: 100px;
+}
+.row.cs:last-child {
+    margin-bottom: 0px;
+}
+/* .row.cs:hover {
+    transform: translateY(-5px);
+} */
+.jobs_board .read_more_div, .jobs_board .jobs_short_desc {
+    margin-top: 20px;
+}
+.jobs_board a.card-link {
+    padding: 10px 25px;
+    color: white;
+    background-image: linear-gradient(90deg,#c13a3c 0%,#e88a21 100%);
+}
+.jobs_desc_row {
+ 	  display: flex;
+    justify-content: space-between;
+    border: 1px solid #fafafaee;
+    padding: 2px;
+}
+.jobs_board .card {
+	transition: all 0.3s ease-in-out;
+}
+.jobs_board {
+	padding: 80px 0;
+}
+.jobs_board .card:hover {
+    transform: translateY(-10px);
+}
+.homepage_vacancies {
+    position: relative;
+    overflow: hidden;
+	padding: 10px;
+	background-image: linear-gradient(90deg,#c13a3c 25%,#e88a21 80%);
+    box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+.company_info.column-8.col {
+    max-width: 80%;
+    padding-right: 20px;
+}
+.vacancy_info.column-4.col {
+    max-width: 20%;
+}
+.vacancy_info.column-4.col {
+  min-width: 100px;
+}
+.homepage_vacancies.startDates {
+  background-image: linear-gradient(90deg,#7F5EA5 25%,#5587c6 80%);
+}
+@media (max-width: 460px) {
+  .row.cs {
+    display: inline-block !important;
+    width: 100%;
+  }
+  .company_info.column-8.col {
+    max-width: 100% !important;
+  }
+  .company_info.column-4.col {
+    max-width: 100% !important;
+  }
+  .homepage_vacancies h2 {
+    line-height: 1.3em;
+  }
+}
