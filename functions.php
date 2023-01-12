@@ -38,9 +38,18 @@ function start_dates() {
 
 add_shortcode( 'start-dates', 'start_dates' );
 
+function csk_blogs() {
+	ob_start();
+	get_template_part('template-parts/blog');
+	$variable = ob_get_clean();
+	return $variable;
+}
+
+add_shortcode( 'csk-blogs', 'csk_blogs' );
+
 function learntech_vacancies_script() {
 	
-	if(is_page('vacancies')) {
+	if(is_page(array('vacancies' , '1324' ))) {
 		wp_enqueue_style( 'cs-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css', all );
 	}
 }
