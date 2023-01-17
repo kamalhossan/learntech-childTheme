@@ -55,3 +55,32 @@ function learntech_vacancies_script() {
 }
 
 add_action('wp_enqueue_scripts', 'learntech_vacancies_script');
+
+add_action('init', 'csk_startDatesPost');
+
+function csk_startDatesPost() {
+		
+	$labels =array(
+	  'name'                     => __( 'Start Dates', 'Divi' ),
+      'singular_name'            => __( 'Start Date', 'Divi' ),
+      'add_new'                  => __( 'Add New', 'Divi' ),
+      'add_new_item'             => __( 'Add New Dates', 'Divi' ),
+	);
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'dates' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_icon'          => 'dashicons-calendar-alt',
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'thumbnail', 'excerpt', 'custom-fields' ),
+	);
+	
+	register_post_type( 'dates', $args );
+}
